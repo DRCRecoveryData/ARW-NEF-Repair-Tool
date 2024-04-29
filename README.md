@@ -13,6 +13,7 @@ ARW/NEF-Repair-Tool is a PyQt6 application for repairing ARW/NEF image files usi
 - Python 3.x
 - PyQt6
 - Rawpy
+- imageio
   
 ## Usage
 
