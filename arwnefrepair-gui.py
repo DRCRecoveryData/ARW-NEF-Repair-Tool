@@ -29,6 +29,9 @@ class ARWNEFRepairWorker(QThread):
 
         encrypted_files = glob.glob(os.path.join(self.encrypted_folder_path, '*.ARW.*')) + glob.glob(os.path.join(self.encrypted_folder_path, '*.NEF.*'))
 
+# RAF supported
+# encrypted_files = #glob.glob(os.path.join(self.encrypted_#folder_path, '*.ARW.*')) + #glob.glob(os.path.join(self.encrypted_#folder_path, '*.NEF.*')) + #glob.glob(os.path.join(self.encrypted_#folder_path, '*.RAF.*'))
+
         total_files = len(encrypted_files)
 
         for i, encrypted_file in enumerate(encrypted_files):
