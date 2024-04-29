@@ -27,7 +27,7 @@ class ARWNEFRepairWorker(QThread):
             converted_folder_path = os.path.join(self.encrypted_folder_path, "Converted")
             os.makedirs(converted_folder_path, exist_ok=True)
 
-        encrypted_files = glob.glob(os.path.join(self.encrypted_folder_path, '*.[AN]RW.*')) + glob.glob(os.path.join(self.encrypted_folder_path, '*.NEF.*'))
+        encrypted_files = glob.glob(os.path.join(self.encrypted_folder_path, '*.ARW.*')) + glob.glob(os.path.join(self.encrypted_folder_path, '*.NEF.*'))
 
         total_files = len(encrypted_files)
 
