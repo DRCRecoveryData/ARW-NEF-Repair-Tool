@@ -1,6 +1,6 @@
 # ARW/NEF-Repair-Tool
 
-![image]()
+![image](https://github.com/DRCRecoveryData/ARW-NEF-Repair-Tool/blob/main/Images/Screenshot%20from%202024-04-29%2017-42-00.png)
 
 ARW/NEF-Repair-Tool is a PyQt6 application for repairing ARW/NEF image files using a reference ARW/NEF file. Provides a user-friendly GUI.
 
