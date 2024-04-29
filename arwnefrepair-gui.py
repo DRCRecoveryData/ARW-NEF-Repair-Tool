@@ -40,7 +40,7 @@ class ARWNEFRepairWorker(QThread):
             self.repair_arw_nef(encrypted_file, self.reference_file_path, repaired_file_path)
 
             if self.convert_to_tiff:
-                tiff_file_path = os.path.join(converted_folder_path, f"{file_name}.tiff")  # Correct TIFF extension
+                tiff_file_path = os.path.join(converted_folder_path, f"{file_name}.TIFF")  # Correct TIFF extension
                 self.save_as_tiff(repaired_file_path, tiff_file_path)
                 self.tiff_converted.emit(f"{file_name} converted to TIFF.")
 
@@ -75,7 +75,7 @@ class ARWNEFRepairWorker(QThread):
         with rawpy.imread(input_file) as raw:
             rgb = raw.postprocess()
         base_filename = os.path.splitext(os.path.basename(input_file))[0]  # Remove extension
-        output_file = os.path.join(os.path.dirname(output_file), f"{base_filename}.tiff")
+        output_file = os.path.join(os.path.dirname(output_file), f"{base_filename}.TIFF")
         imageio.imsave(output_file, rgb)
 
 class ARWNEFRepairApp(QWidget):
